@@ -4,7 +4,7 @@ import currency from '../assets/Currency.png';
 import hero from '../assets/image 1.png';
 import background from '../assets/background.png';
 
-const Nabvar = () => {
+const Nabvar = ({coin}) => {
     return (
         <div className='container mx-auto px-4'>
          <header>
@@ -29,7 +29,7 @@ const Nabvar = () => {
 
                             <li className="border border-1 border-cyan-950 rounded-lg ml-4">
                                 <div className="flex items-center gap-2 font-bold">
-                                    0 Coin
+                                    {coin} Coin
                                     <img src={currency} alt="currency logo" className="w-6 h-6" />
                                 </div>
                             </li>

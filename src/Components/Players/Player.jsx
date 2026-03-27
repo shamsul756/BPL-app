@@ -3,7 +3,7 @@ import AvailablePlayers from "../AvailablePlayers/AvailablePlayers";
 import SelectedPlayer from "../ui/SelectedPlayer/SelectedPlayer";
 
 
-const Player = ({ playersPromise }) => {
+const Player = ({ playersPromise, coin, setCoin }) => {
 
     const player = use(playersPromise);
 
@@ -18,13 +18,13 @@ const Player = ({ playersPromise }) => {
                     <button onClick={() => setSelectedType("available")}
                         className={`btn ${selectedType === "available" ? "bg-[#e7fe29]" : ""}  rounded-r-none rounded-l-xl`}>Available</button>
                     <button onClick={() => setSelectedType("selected")}
-                        className={`btn ${selectedType === "selected" ? "bg-[#e7fe29]" : ""} rounded-l-none rounded-r-xl`}>Selected(0)</button>
+                        className={`btn ${selectedType === "selected" ? "bg-[#e7fe29]" : ""} rounded-l-none rounded-r-xl`}>Selected 0</button>
                 </div>
             </div>
 
            
             {selectedType === "available" ? (
-                <AvailablePlayers player={player} />
+                <AvailablePlayers player={player} setCoin={setCoin} coin={coin}/>
             ) : (
                 <SelectedPlayer />
             )}
