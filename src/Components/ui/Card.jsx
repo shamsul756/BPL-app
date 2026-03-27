@@ -25,6 +25,7 @@ const Card = ({player}) => {
                             alt={player.country}
                             className=" h-10  object-cover"
                         />
+                        <button className='btn'>{player.name}</button>
                     </h2>
                     <div className='flex justify-between gap-2 items-center'>
                         <div className='flex gap-2 items-center'>

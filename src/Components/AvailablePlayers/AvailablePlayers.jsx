@@ -9,7 +9,7 @@ const AvailablePlayers = ({ player }) => {
             {player.map((player) => {
                 console.log(player);
                 return (
-                <Card player={player} />
+               <Card key={player.playerId} player={player} />
                 )
             })}
 
