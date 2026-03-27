@@ -6,8 +6,8 @@ import background from '../assets/background.png';
 
 const Nabvar = () => {
     return (
-        <>
-            <header>
+        <div className='container mx-auto px-4'>
+         <header>
 
                 {/* // navbar desing */}
                 <div className=" navbar bg-base-100 shadow-sm container mx-auto p-5">
@@ -40,14 +40,14 @@ const Nabvar = () => {
             </header>
             <main>
 
-                <section className='w-10/12 md:relative w-11/12 mx-auto mt-5 h-[450px] flex flex-col items-center justify-center text-center'>
+                <section className='md:relative mx-auto mt-5 h-[450px] flex flex-col items-center justify-center text-center container'>
                     <div className='w-11/12 mx-auto mt-5 absolute inset-0 -z-10 '>
                         <img className='w-full h-full rounded-2xl object-cover' src={background} alt="background logo combinatin of three color" />
                     </div>
                     <div className='flex flex-col items-center gap-4'>
-                        <img className='w-8/12 md:w-3/12' src={hero} alt="cricket logo and text" />
-                        <h2 className='font-semibold text-2xl md:font-bold text-4xl mx-auto text-white'>Assemble Your Ultimate Dream 11 Cricket Team</h2>
-                        <p className='font-semibold text-xl text-gray-200'>Beyond Boundaries Beyond Limits</p>
+                        <img className='w-6/12 md:w-3/12' src={hero} alt="cricket logo and text" />
+                        <h2 className='font-semibold text-xl md:text-3xl lg:font-bold text-4xl mx-auto text-white'>Assemble Your Ultimate Dream 11 Cricket Team</h2>
+                        <p className='font-semibold text-xl text-gray-200'>Beyond Boundaries Beyond Limits</p>w
 
                         <button className='btn bg-[#e7fe29] hover:bg-[#d4e925] font-bold text-md outline-2 outline outline-[#e7f329] px-5 py-4 border-none outline-offset-4 rounded-md'>Claim Free Credit</button>
                     </div>
@@ -64,7 +64,7 @@ const Nabvar = () => {
             <footer>
 
             </footer>
-        </>
+      </div>
 
     );
 };

@@ -1,15 +1,21 @@
-import React from 'react';
-import Nabvar from './Components/Nabvar';
+import React, { Suspense } from 'react'; 
+import Navbar from './Components/Nabvar';
+import Player from './Components/Players/Player';
+
+const fetchPlayer = async () => {
+  const res = await fetch("/data.json");
+  return res.json(); 
+}
 
 const App = () => {
+  const playersPromise = fetchPlayer();
+  
   return (
     <>
-<Nabvar></Nabvar>
-
-
-
-
-
+      <Navbar />
+      <Suspense fallback={<span className="loading loading-spinner text-warning"></span>}>
+        <Player playersPromise={playersPromise} />
+      </Suspense>
     </>
   );
 };
