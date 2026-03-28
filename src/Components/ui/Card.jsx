@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaFlag } from "react-icons/fa";
 import { MdOutlineMan3 } from "react-icons/md";
-const Card = ({ player, setCoin, coin }) => {
+const Card = ({ player, setCoin, coin, selectedPlayer, setSelectedPlayer }) => {
     const [isSelected, setIsSelected] = useState(false);
     const handleChoosePlayer = () => {
         let newCoin = coin - player.price;
@@ -14,6 +14,7 @@ const Card = ({ player, setCoin, coin }) => {
         }
         alert(`${player.name} is selected`)
         setIsSelected(true);
+        setSelectedPlayer([...selectedPlayer, player])
     }
     return (
         <div>

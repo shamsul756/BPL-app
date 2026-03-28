@@ -49,7 +49,7 @@ const Nabvar = ({coin}) => {
                         <h2 className='font-semibold text-xl md:text-3xl lg:font-bold text-4xl mx-auto text-white'>Assemble Your Ultimate Dream 11 Cricket Team</h2>
                         <p className='font-semibold text-xl text-gray-200'>Beyond Boundaries Beyond Limits</p>w
 
-                        <button className='btn bg-[#e7fe29] hover:bg-[#d4e925] font-bold text-md outline-2 outline outline-[#e7f329] px-5 py-4 border-none outline-offset-4 rounded-md'>Claim Free Credit</button>
+                        <button className='hidden md:block btn bg-[#e7fe29] hover:bg-[#d4e925] outline-2 outline outline-[#e7f329] font-bold text-2xl px-5 py-1 border-none outline-offset-4 rounded-md'>Claim Free Credit</button>
                     </div>
                 </section>
 
