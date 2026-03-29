@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaFlag } from "react-icons/fa";
 import { MdOutlineMan3 } from "react-icons/md";
+import { toast } from 'react-toastify';
 
 const Card = ({ player, setCoin, coin, selectedPlayer, setSelectedPlayer }) => {
     
@@ -12,10 +13,11 @@ const Card = ({ player, setCoin, coin, selectedPlayer, setSelectedPlayer }) => {
         if(newCoin >= 0){
             setCoin(coin - player.price);
         } else {
-            alert("Not Enough coin to purchase this player");
+            toast.error("Not Enough coin to purchase this player");
             return;
         }
-        alert(`${player.name} is selected`)
+        toast(`${player.name} is selected`)
+       
         setSelectedPlayer([...selectedPlayer, player])
     }
 
