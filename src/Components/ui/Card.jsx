@@ -1,44 +1,34 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FaFlag } from "react-icons/fa";
 import { MdOutlineMan3 } from "react-icons/md";
+
 const Card = ({ player, setCoin, coin, selectedPlayer, setSelectedPlayer }) => {
-    const [isSelected, setIsSelected] = useState(false);
+    
+    // ✅ removed local useState, check from array instead
+    const isSelected = selectedPlayer.some(p => p.playerId === player.playerId);
+
     const handleChoosePlayer = () => {
         let newCoin = coin - player.price;
-        if(newCoin>= 0){
+        if(newCoin >= 0){
             setCoin(coin - player.price);
-        }
-        else{
+        } else {
             alert("Not Enough coin to purchase this player");
             return;
         }
         alert(`${player.name} is selected`)
-        setIsSelected(true);
         setSelectedPlayer([...selectedPlayer, player])
     }
+
     return (
         <div>
             <div className="card bg-base-100 shadow-2xl">
                 <figure className='px-10 pt-10'>
-                    {/* Use an img tag and set the src attribute */}
-                    <img
-                        src={player.image}
-                        alt={player.name}
-                        className="rounded-xl h-60 w-full object-cover"
-                    />
+                    <img src={player.image} alt={player.name} className="rounded-xl h-60 w-full object-cover"/>
                 </figure>
                 <div className="card-body">
                     <h2 className="card-title">
-                        <img
-                            src={player.role_icon}
-                            alt={player.country}
-                            className=" h-8  object-cover"
-                        />
-                        <img
-                            src={player.flag}
-                            alt={player.country}
-                            className=" h-10  object-cover"
-                        />
+                        <img src={player.role_icon} alt={player.country} className=" h-8 object-cover"/>
+                        <img src={player.flag} alt={player.country} className=" h-10 object-cover"/>
                         <button className='btn'>{player.name}</button>
                     </h2>
                     <div className='flex justify-between gap-2 items-center'>
@@ -54,12 +44,11 @@ const Card = ({ player, setCoin, coin, selectedPlayer, setSelectedPlayer }) => {
                         <p>{player.batting_style}</p>
                         <p className='text-right'>{player.bowling_style}</p>
                     </div>
-
                     <div className="card-actions justify-between items-center">
                         <p className='font-semibold'>price : ${player.price}</p>
-                        <button className="btn" onClick={handleChoosePlayer}
-                            disabled={isSelected}>
-                            {isSelected ? "Selected" : "Choose Player"}</button>
+                        <button className="btn" onClick={handleChoosePlayer} disabled={isSelected}>
+                            {isSelected ? "Selected" : "Choose Player"}
+                        </button>
                     </div>
                 </div>
             </div>
