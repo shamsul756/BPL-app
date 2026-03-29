@@ -2,6 +2,8 @@
 ![alt text](image.png)
 <!-- hero sectio design -->
 ![alt text](image-1.png)
+<!-- card section -->
+![alt text](image-2.png)
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
