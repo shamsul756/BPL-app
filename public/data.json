@@ -22,7 +22,7 @@
     "rating": 94,
     "batting_style": "Right-hand bat",
     "bowling_style": "Right-arm medium",
-    "price": 10,
+    "price": 100,
     "image": "https://cdn.britannica.com/48/252748-050-C514EFDB/Virat-Kohli-India-celebrates-50th-century-Cricket-November-15-2023.jpg"
   },
   {
@@ -35,7 +35,7 @@
     "rating": 92,
     "batting_style": "Right-hand bat",
     "bowling_style": "Right-arm offbreak",
-    "price": 1050,
+    "price": 150,
     "image": "https://res.cloudinary.com/jerrick/image/upload/d_642250b563292b35f27461a7.png,f_jpg,fl_progressive,q_auto,w_1024/6422b7266abaab001eafc0c1.jpg"
   },
   {
@@ -48,7 +48,7 @@
     "rating": 89,
     "batting_style": "Right-hand bat",
     "bowling_style": "Right-arm legbreak",
-    "price": 8500,
+    "price": 850,
     "image": "https://c.ndtvimg.com/2024-06/8mvq5v38_rashid-khan_625x300_26_June_24.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738"
   },
   {
@@ -61,7 +61,7 @@
     "rating": 88,
     "batting_style": "Left-hand bat",
     "bowling_style": "Right-arm fast-medium",
-    "price": 9800,
+    "price": 980,
     "image": "https://revsportz.in/wp-content/uploads/2025/07/Stokes-2.jpg"
   },
   {
@@ -126,7 +126,7 @@
     "rating": 84,
     "batting_style": "Left-hand bat",
     "bowling_style": "Right-arm offbreak",
-    "price": 5200,
+    "price": 500,
     "image": "https://media.crictracker.com/media/attachments/1762004530966_Nicholas-Pooran.jpeg"
   },
   {
@@ -139,7 +139,7 @@
     "rating": 83,
     "batting_style": "Left-hand bat",
     "bowling_style": "Left-arm fast-medium",
-    "price": 4500,
+    "price": 400,
     "image": "https://khelnow.com/_next/image?url=https%3A%2F%2Fassets.khelnow.com%2Fnews%2Fuploads%2F2025%2F12%2FMustafizur-Rahman-KKR-Lead.jpg&w=1920&q=75"
   }
 ]

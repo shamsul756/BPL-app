@@ -16,7 +16,12 @@ const SelectedPlayer = ({ SelectedPlayer, setSelectedPlayers, setCoin, coin }) =
     return (
         <div className='space-y-4'>
             <div className='px-8 font-semibold text-2xl'>
-                {SelectedPlayer.map((player, ind) => {
+                {SelectedPlayer.length === 0 ?
+                <div className=' text-center p-5 m-9 '>
+                    <h2 className='text-gray-700 text-6xl font-bold p-5'>No player selected yet</h2>
+                    <p className='text-gray-600 font-semibold text-3xl p-5'>Go to Available tab to select players</p>
+                    </div>
+               : SelectedPlayer.map((player, ind) => {
                     return (
                         <div key={ind} className='flex items-center gap-6 justify-between p-5 m-5 rounded-2xl border'>
                             <div className='flex gap-6'>
